@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-11-10T01:20:24.699Z",
+    "end": "2022-11-10T01:20:29.237Z",
+    "duration": 4538,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a2485164-54c3-4f41-8a07-16a4381dc851",
+      "title": "",
+      "fullFile": "cypress/e2e/01.starwarsApi.cy.js",
+      "file": "cypress/e2e/01.starwarsApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0cad6e7d-a8cb-481b-b60b-1d05b1054a20",
+          "title": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realize uma requisição para a API",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Realize uma requisição para a API",
+              "timedOut": null,
+              "duration": 731,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@mockFetch').should('be.called');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Function.keys (<anonymous>)\n    at Table (http://localhost:3000/static/js/bundle.js:145:22)\n    at renderWithHooks (http://localhost:3000/static/js/bundle.js:28444:22)\n    at mountIndeterminateComponent (http://localhost:3000/static/js/bundle.js:32109:17)\n    at beginWork (http://localhost:3000/static/js/bundle.js:33577:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:16240:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:16289:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:16351:35)\n    at beginWork$1 (http://localhost:3000/static/js/bundle.js:39364:11)\n    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:38497:16)",
+                "diff": null
+              },
+              "uuid": "ff767221-f0e6-4d1e-9c2e-a289e3cb86d3",
+              "parentUUID": "0cad6e7d-a8cb-481b-b60b-1d05b1054a20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Preencha a tabela com os dados retornados",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Preencha a tabela com os dados retornados",
+              "timedOut": null,
+              "duration": 319,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "planets.forEach(planet => {\n  cy.contains(planet.name);\n  cy.contains(planet.rotation_period);\n  cy.contains(planet.orbital_period);\n  cy.contains(planet.diameter);\n  cy.contains(planet.climate);\n  cy.contains(planet.gravity);\n  cy.contains(planet.terrain);\n  cy.contains(planet.surface_water);\n  cy.contains(planet.population);\n});",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Function.keys (<anonymous>)\n    at Table (http://localhost:3000/static/js/bundle.js:145:22)\n    at renderWithHooks (http://localhost:3000/static/js/bundle.js:28444:22)\n    at mountIndeterminateComponent (http://localhost:3000/static/js/bundle.js:32109:17)\n    at beginWork (http://localhost:3000/static/js/bundle.js:33577:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:16240:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:16289:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:16351:35)\n    at beginWork$1 (http://localhost:3000/static/js/bundle.js:39364:11)\n    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:38497:16)",
+                "diff": null
+              },
+              "uuid": "7ba5be65-2725-45b0-af2d-0e6c5865dabd",
+              "parentUUID": "0cad6e7d-a8cb-481b-b60b-1d05b1054a20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifique se a tabela tem 13 colunas",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem 13 colunas",
+              "timedOut": null,
+              "duration": 164,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 14 chaves em cada planeta, mas a chave `residents` não deve ser exibida totalizando 13 colunas\ncy.get('table tr:first th').should('have.length', MAX_COLUMNS_COUNT);",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Function.keys (<anonymous>)\n    at Table (http://localhost:3000/static/js/bundle.js:145:22)\n    at renderWithHooks (http://localhost:3000/static/js/bundle.js:28444:22)\n    at mountIndeterminateComponent (http://localhost:3000/static/js/bundle.js:32109:17)\n    at beginWork (http://localhost:3000/static/js/bundle.js:33577:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:16240:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:16289:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:16351:35)\n    at beginWork$1 (http://localhost:3000/static/js/bundle.js:39364:11)\n    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:38497:16)",
+                "diff": null
+              },
+              "uuid": "de38e3b2-47ae-4af0-81d2-3b58974f14df",
+              "parentUUID": "0cad6e7d-a8cb-481b-b60b-1d05b1054a20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifique se a tabela tem uma linha para cada planeta retornado",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem uma linha para cada planeta retornado",
+              "timedOut": null,
+              "duration": 298,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 10 planetas, somando com mais um linha do header totalizando 11 linhas\ncy.get('table tr').should('have.length', planets.length + 1);",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot convert undefined or null to object\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Function.keys (<anonymous>)\n    at Table (http://localhost:3000/static/js/bundle.js:145:22)\n    at renderWithHooks (http://localhost:3000/static/js/bundle.js:28444:22)\n    at mountIndeterminateComponent (http://localhost:3000/static/js/bundle.js:32109:17)\n    at beginWork (http://localhost:3000/static/js/bundle.js:33577:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:16240:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:16289:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:16351:35)\n    at beginWork$1 (http://localhost:3000/static/js/bundle.js:39364:11)\n    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:38497:16)",
+                "diff": null
+              },
+              "uuid": "bb50984c-9255-4286-954e-9fafe98d6b0e",
+              "parentUUID": "0cad6e7d-a8cb-481b-b60b-1d05b1054a20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ff767221-f0e6-4d1e-9c2e-a289e3cb86d3",
+            "7ba5be65-2725-45b0-af2d-0e6c5865dabd",
+            "de38e3b2-47ae-4af0-81d2-3b58974f14df",
+            "bb50984c-9255-4286-954e-9fafe98d6b0e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1512,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

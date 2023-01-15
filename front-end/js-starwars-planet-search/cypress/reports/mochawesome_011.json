@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-11-11T11:58:21.409Z",
+    "end": "2022-11-11T11:58:22.508Z",
+    "duration": 1099,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "24830d79-fe6d-44c0-9b8d-f4c21f946269",
+      "title": "",
+      "fullFile": "cypress/e2e/01.starwarsApi.cy.js",
+      "file": "cypress/e2e/01.starwarsApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b32e145b-2bf5-47f5-8b6a-631fdaeead77",
+          "title": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realize uma requisição para a API",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Realize uma requisição para a API",
+              "timedOut": null,
+              "duration": 745,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@mockFetch').should('be.called');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `1 - Faça uma requisição par...`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `1 - Faça uma requisição par...`\n    at http://localhost:43159/__cypress/runner/cypress_runner.js:142111:82\n    at visitFailedByErr (http://localhost:43159/__cypress/runner/cypress_runner.js:141413:12)\n    at http://localhost:43159/__cypress/runner/cypress_runner.js:142110:11\n    at tryCatcher (http://localhost:43159/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:43159/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:43159/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:43159/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:43159/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:43159/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:43159/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:43159/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:43159/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:43159/__cypress/tests?p=cypress/e2e/01.starwarsApi.cy.js:127:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16)\n  ",
+                "diff": null
+              },
+              "uuid": "affca172-a5dd-45be-981d-0fd9f81ffa9e",
+              "parentUUID": "b32e145b-2bf5-47f5-8b6a-631fdaeead77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Preencha a tabela com os dados retornados",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Preencha a tabela com os dados retornados",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "planets.forEach(planet => {\n  cy.contains(planet.name);\n  cy.contains(planet.rotation_period);\n  cy.contains(planet.orbital_period);\n  cy.contains(planet.diameter);\n  cy.contains(planet.climate);\n  cy.contains(planet.gravity);\n  cy.contains(planet.terrain);\n  cy.contains(planet.surface_water);\n  cy.contains(planet.population);\n});",
+              "err": {},
+              "uuid": "0c1c0e3b-75fd-41a4-9ca5-ed8f48a715ae",
+              "parentUUID": "b32e145b-2bf5-47f5-8b6a-631fdaeead77",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verifique se a tabela tem 13 colunas",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem 13 colunas",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 14 chaves em cada planeta, mas a chave `residents` não deve ser exibida totalizando 13 colunas\ncy.get('table tr:first th').should('have.length', MAX_COLUMNS_COUNT);",
+              "err": {},
+              "uuid": "e72d89d4-6106-4109-b11d-678923aecd3e",
+              "parentUUID": "b32e145b-2bf5-47f5-8b6a-631fdaeead77",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verifique se a tabela tem uma linha para cada planeta retornado",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem uma linha para cada planeta retornado",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 10 planetas, somando com mais um linha do header totalizando 11 linhas\ncy.get('table tr').should('have.length', planets.length + 1);",
+              "err": {},
+              "uuid": "a176eeb9-5d85-466f-b280-da2064bf7a6a",
+              "parentUUID": "b32e145b-2bf5-47f5-8b6a-631fdaeead77",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "affca172-a5dd-45be-981d-0fd9f81ffa9e"
+          ],
+          "pending": [],
+          "skipped": [
+            "0c1c0e3b-75fd-41a4-9ca5-ed8f48a715ae",
+            "e72d89d4-6106-4109-b11d-678923aecd3e",
+            "a176eeb9-5d85-466f-b280-da2064bf7a6a"
+          ],
+          "duration": 745,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
